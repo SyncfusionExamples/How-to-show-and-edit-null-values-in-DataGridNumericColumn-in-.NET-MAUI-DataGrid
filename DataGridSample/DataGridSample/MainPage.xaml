@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataGridSample.MainPage"
+             xmlns:local="clr-namespace:DataGridSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+
+
+    <ContentPage.BindingContext>
+        <local:OrderInfoRepository />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               AllowEditing="True"
+                               SelectionMode="Single"
+                               ItemsSource="{Binding OrderInfoCollection}">
+            
+        </syncfusion:SfDataGrid>
+        
+    </ContentPage.Content>
+</ContentPage>
